@@ -1,0 +1,50 @@
+<h1 style="text-align: center;">MAKE A TABLE :- </h1>
+<table border="2" cellpadding="15" style="margin: auto;">
+    <tr>
+        <td>Row :- </td>
+        <td><input type="number" id="row"></td>
+    </tr>
+    <tr>
+        <td>Column :- </td>
+        <td><input type="number" id="Column"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="button" value="submit" onclick="save()"></td>
+    </tr>
+
+</table>
+<br>
+<br>
+<h2 style="text-align: center;">YOUR OUTPUT :-</h2>
+<table border="2" cellpadding="20" cellspacing="0" id="root" style="margin: auto;">
+
+</table>
+
+
+<script type="text/javascript">
+
+    let sum = () => {
+        document.getElementById('row').value = '';
+        document.getElementById('Column').value = '';
+    }
+
+    let save = () => {
+        i = document.getElementById('row').value;
+        j = document.getElementById('Column').value;
+
+        {
+            for (let row = 0; row < i; row++) {
+                let tr = document.createElement('tr');
+
+                for (let col = 0; col < j; col++) {
+                    let td = document.createElement('td');
+                    tr.appendChild(td);
+                }
+                root.appendChild(tr);
+            }
+        }
+        sum();
+    }
+
+</script>
